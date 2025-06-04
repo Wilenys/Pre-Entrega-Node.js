@@ -51,7 +51,7 @@ const deleteProduct = async (productId) => {
 // Controlador principal
 const main = async () => {
   if (!method || !resource) {
-    console.log("⚠️  Uso incorrecto. Ejemplos:\n - npm run start GET products\n - npm run start GET products/5");
+    console.log("  Uso incorrecto. Ejemplos:\n - npm run start GET products\n - npm run start GET products/5");
     return;
   }
 
@@ -74,14 +74,14 @@ const main = async () => {
 
     case 'DELETE':
       if (!id) {
-        console.log("⚠️  Debes especificar un ID para eliminar.");
+        console.log(" Debes especificar un ID para eliminar.");
         return;
       }
       await deleteProduct(id);
       break;
 
     default:
-      console.log("❌ Método no soportado. Usa GET, POST o DELETE.");
+      console.log(" Método no soportado. Usa GET, POST o DELETE.");
   }
 };
 
